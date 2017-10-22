@@ -22,7 +22,7 @@ def plot():
         avg_speeds.append(curr_sum / 10)
         curr_sum = curr_sum - speeds[i - 9]
 
-    plt.plot(avg_speeds)
+    plt.plot([i for i in range(10, len(speeds) + 1)], avg_speeds)
     plt.ylabel('Average speed of last 10 races')
     plt.xlabel('No. of races')
     plt.show()
